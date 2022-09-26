@@ -9,7 +9,7 @@ import utils
 import time
 import numpy as np
 from scipy import spatial
-from sklearn.covariance import graph_lasso
+from sklearn.covariance import graphical_lasso
 from pyunlocbox import functions, solvers
 
 
@@ -330,7 +330,7 @@ def glasso(X, alpha=1, w0=None, maxit=1000, rtol=1e-5, retall=False,
 
     # Solve problem
     tstart = time.time()
-    res = graph_lasso(emp_cov=S,
+    res = graphical_lasso(emp_cov=S,
                       alpha=alpha,
                       cov_init=w0,
                       mode='cd',
