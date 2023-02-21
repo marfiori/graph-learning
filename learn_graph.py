@@ -12,7 +12,7 @@ from scipy import spatial
 from sklearn.covariance import graphical_lasso
 from pyunlocbox import functions, solvers
 
-def log_degree_barrierZ(z, alpha=1, beta=1, step=0.5,
+def log_degree_barrierZ(z,N, alpha=1, beta=1, step=0.5,
                        w0=None, maxit=1000, rtol=1e-5, retall=False,
                        verbosity='NONE'):
     r"""
@@ -101,7 +101,7 @@ def log_degree_barrierZ(z, alpha=1, beta=1, step=0.5,
     """
 
     # Parse X
-    N = z.shape[0]
+    #N = z.shape[0]
     #z = spatial.distance.pdist(X, dist_type)  # Pairwise distances
 
     # Parse stepsize
