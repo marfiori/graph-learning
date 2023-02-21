@@ -101,7 +101,7 @@ def log_degree_barrierZ(z, alpha=1, beta=1, step=0.5,
     """
 
     # Parse X
-    #N = X.shape[0]
+    N = z.shape[0]
     #z = spatial.distance.pdist(X, dist_type)  # Pairwise distances
 
     # Parse stepsize
